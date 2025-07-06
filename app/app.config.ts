@@ -1,7 +1,8 @@
 export default defineAppConfig({
   global: 'www.oaaa.lk@gmail.com',
   ui: {
-    colors: 'stone'
+    colors: '',
+    icons: 'i-lucide-chevron-down'
   },
   uiPro: {
     pageHero: {
