@@ -1,14 +1,3 @@
-title: About OAAA
-description: Old Anandian Astronomical Association
-content: The Old Anandian Astronomical Association (OAAA) is the alumni body of the Anandian Astronomical Association of Ananda College, Colombo — one of the most prestigious and pioneering school-based astronomy clubs in Sri Lanka. Founded to unite passionate Anandians beyond school, the OAAA serves as a platform for former members to continue their astronomical pursuits, support current students, and promote astronomy education across the island.
-
-Our mission is to foster curiosity, knowledge-sharing, and community engagement in the field of astronomy and space science. We organize public observation nights, lectures, workshops, and collaborative projects, while also mentoring the next generation of Anandians in their astronomical journey.
-
-With a legacy of excellence, innovation, and outreach, the OAAA is committed to keeping the spirit of discovery alive — connecting generations through a shared passion for the cosmos.
-images:
-  - src: https://images.unsplash.com/photo-1744877478622-a78c7a3336f6?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: My coffee workspace
-  - src: https://images.unsplash.com/photo-1744429523595-2c06b8611242?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: My trip to Tokyo
-seo:
-  title: About OAAA
+images: []
+title: /oaaa.jpg
+description: About OAAA
