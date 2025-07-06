@@ -30,7 +30,11 @@ export default defineNuxtConfig({
       crawlLinks: true
     }
   },
-
+  content: {
+    preview: {
+      api: 'https://api.nuxt.studio'
+    }
+  },
   eslint: {
     config: {
       stylistic: {
