@@ -1,3 +1,10 @@
 images: []
 title: /oaaa.jpg
 description: About OAAA
+seo:
+  title: OAAA
+  description: Old Anandian Astronomical Association
+navigation:
+  title: OAAA
+  description: Old Anandian Astronomical Association
+  icon: /favicon.ico
