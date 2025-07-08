@@ -1,10 +1,71 @@
-images: []
+images:
+  - src: /oaaa.jpg
+    alt: "OAAA Logo"
+    caption: "Old Anandian Astronomical Association"
+  - src: /ananda.png
+    alt: "Ananda College Logo"
+    caption: "Ananda College"
 title: OAAA
-description: About OAAA
+description: The Old Anandians' Astronomical Association (OAAA) is a distinguished organization of alumni from Ananda College, Colombo, Sri Lanka, united by our shared passion for astronomy and space science.
 seo:
-  title: OAAA
-  description: Old Anandian Astronomical Association
+  title: OAAA - Old Anandian Astronomical Association
+  description: Old Anandian Astronomical Association - A community of Ananda College alumni dedicated to astronomical education and research
 navigation:
   title: OAAA
   description: Old Anandian Astronomical Association
   icon: /favicon.ico
+content: |
+  The Old Anandians' Astronomical Association (OAAA) is a distinguished organization of alumni from Ananda College, Colombo, Sri Lanka, united by our shared passion for astronomy and space science.
+
+  Founded in 2018 to bridge the gap between professional astronomical knowledge and public education, OAAA serves as a beacon for scientific outreach in Sri Lanka. Our members include both amateur and professional astronomers, educators, and science communicators who are dedicated to promoting astronomy as both a science and a hobby. Through our deep connection to Ananda College's rich scientific heritage, we continue to inspire current students and the broader community to explore the wonders of the universe.
+
+  ## Ananda College - A Legacy of Excellence
+
+  Ananda College, established in 1886, stands as one of Sri Lanka's premier educational institutions. Founded by the Buddhist Theosophical Society led by Colonel Henry Steel Olcott, the college was named after the Buddha's faithful attendant, Ananda Thero. The college's motto "යථා පුප්ඵං පියං හොති" (Beautiful as a Flower) embodies our commitment to nurturing well-rounded individuals who contribute meaningfully to society.
+
+  Throughout its history, Ananda College has been at the forefront of science education in Sri Lanka. The college's distinctive architecture, featuring its iconic clock tower and historic science laboratories, has witnessed generations of students discovering their passion for scientific exploration.
+
+  ## The Anandian Astronomical Association (AAA)
+
+  The Anandian Astronomical Association (AAA) was established in the early 1990s as a student society within Ananda College. It has served as the foundation for astronomical education and exploration among students, organizing:
+
+  - Regular stargazing sessions using the college's telescopes
+  - Educational workshops and seminars
+  - Participation in national and international astronomy competitions
+  - Annual astronomy camps and field trips
+  - Publication of astronomy-related articles and research papers
+
+  The AAA has been instrumental in fostering a love for astronomy among students, many of whom have gone on to pursue careers in astronomy, astrophysics, and related fields.
+
+  ## OAAA - Bridging Past and Future
+
+  The Old Anandians' Astronomical Association builds upon this rich heritage, extending the mission beyond the college walls. Our key initiatives include:
+
+  ### Educational Outreach
+  - Conducting public astronomy workshops and stargazing events
+  - Supporting astronomy education in rural schools
+  - Organizing astronomy competitions and exhibitions
+  - Providing mentorship to current AAA members
+
+  ### Research and Collaboration
+  - Facilitating research opportunities with international astronomical organizations
+  - Supporting amateur astronomy projects
+  - Publishing astronomy-related content in local languages
+  - Maintaining a network of amateur astronomers across Sri Lanka
+
+  ### Community Engagement
+  - Regular meetups and knowledge-sharing sessions
+  - Annual astronomy conferences
+  - Public lectures by renowned astronomers
+  - Special events during significant astronomical phenomena
+
+  ### Future Vision
+
+  As we look to the future, OAAA remains committed to:
+  - Expanding astronomy education across Sri Lanka
+  - Building stronger international collaborations
+  - Supporting the next generation of astronomers
+  - Promoting scientific literacy and critical thinking
+  - Preserving and documenting Sri Lanka's astronomical heritage
+
+  Join us in our mission to explore the cosmos and inspire future generations of astronomers. Whether you're an Old Anandian, a current student, or simply someone passionate about astronomy, OAAA welcomes you to be part of our continuing journey of discovery and learning.

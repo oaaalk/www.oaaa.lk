@@ -1,120 +1,134 @@
 seo:
-  title: Old Anandian Astronomical Association
-  description: Blending with the cosmos
-title: Old Anandian Astronomical Association
-description: Blending with the cosmos
+  title: Old Anandians' Astronomical Association
+  description: Astronomy for all generations of Anandians
+
+title: Old Anandians' Astronomical Association
+
+description: Inspiring curiosity and discovery in astronomy for Anandians and the wider community.
+
 hero:
+  title: Explore the Cosmos with OAAA
+  description: Connecting Anandians past and present through a shared passion for astronomy and science.
   links:
-    - label: Use this template
-      to: https://github.com/nuxt-ui-pro/portfolio
+    - label: Join OAAA
+      to: /about
+      icon: i-heroicons-user-plus
+      color: primary
+    - label: Events
+      to: /events
+      icon: i-heroicons-calendar
+      color: secondary
+    - label: Projects
+      to: /projects
+      icon: i-heroicons-telescope
       color: neutral
   images:
-    - src: https://picsum.photos/468/468?random=1
-      alt: Random Image 1
-    - src: https://picsum.photos/468/468?random=2
-      alt: Random Image 2
-    - src: https://picsum.photos/468/468?random=3
-      alt: Random Image 3
-    - src: https://picsum.photos/468/468?random=4
-      alt: Random Image 4
-    - src: https://picsum.photos/468/468?random=5
-      alt: Random Image 5
-    - src: https://picsum.photos/468/468?random=6
-      alt: Random Image 6
-    - src: https://picsum.photos/468/468?random=6
-      alt: Random Image 6
-    - src: https://picsum.photos/468/468?random=7
-      alt: Random Image 7
-    - src: https://picsum.photos/468/468?random=8
-      alt: Random Image 8
+    - src: /images/hero/telescope.jpg
+      alt: OAAA Telescope Observatory
+    - src: /images/hero/stargazing.jpg
+      alt: Public Stargazing Event
+    - src: /oaaa.jpg
+      alt: OAAA Logo
+
 about:
-  title: About Me
+  title: About OAAA
   description: |
-    As a UX/UI designer and front-end developer with 6 years of experience, I leverage my Boston University Interactive Design degree to craft user-centered digital experiences.
-    My approach blends creative strategy with technical expertise, transforming concepts into functional, purposeful digital products that seamlessly integrate design and technology.
+    The Old Anandians' Astronomical Association (OAAA) unites alumni of Ananda College, Colombo, who share a love for astronomy. We build on the legacy of Ananda College (founded 1886) and the Anandian Astronomical Association (AAA, founded early 1990s), inspiring new generations to reach for the stars. OAAA was founded in 2018 and became an affiliate of the Ananda College Old Boys' Association in 2025.
+  links:
+    - label: Learn More
+      to: /about
+      icon: i-heroicons-arrow-right
+      color: primary
+
+mission:
+  title: Our Mission
+  description: |
+    To foster astronomical education and scientific inquiry among Anandians and the broader Sri Lankan community. We strive to make astronomy accessible to all, promote scientific literacy, and inspire future generations to pursue careers in astronomy and space science.
+  icon: i-heroicons-rocket-launch
+
+vision:
+  title: Our Vision
+  description: |
+    To be Sri Lanka's leading alumni-based astronomical organization, bridging the gap between professional astronomy and public education while preserving and advancing the scientific heritage of Ananda College for future generations.
+  icon: i-heroicons-eye
+
 experience:
-  title: Work Experience
+  title: Our Milestones
   items:
-    - position: Brand Designer at
-      date: 2023 - Present
+    - position: Ananda College Founded
+      date: 1886
       company:
-        name: Nuxt
-        logo: i-simple-icons-nuxtdotjs
-        url: https://nuxt.com
+        name: Ananda College
+        logo: i-ph-graduation-cap
+        url: https://anandacollege.edu.lk
+        color: '#F59E42'
+    - position: Anandian Astronomical Association Founded
+      date: 1990s
+      company:
+        name: AAA
+        logo: i-ph-telescope
+        url: /about
+        color: '#4F46E5'
+    - position: Old Anandians' Astronomical Association Founded
+      date: 2018
+      company:
+        name: OAAA
+        logo: i-ph-users-three
+        url: /about
         color: '#00DC82'
-    - position: Assets Designer at
-      date: 2022 - 2023
+    - position: OAAA Affiliates with OBA
+      date: 2025
       company:
-        name: Raycast
-        logo: i-simple-icons-raycast
-        url: https://raycast.com
-        color: '#FF6363'
-    - position: Senior UX/UI Designer at
-      date: 2020 - 2021
-      company:
-        name: Linear
-        logo: i-simple-icons-linear
-        url: https://linear.app
+        name: OBA Affiliation
+        logo: i-ph-link
+        url: /about
         color: '#5E6AD2'
+
+board:
+  title: Board of Officials
+  description: The leadership team of the Old Anandians' Astronomical Association
+  officials:
+    - name: Dr. D.Z.S.S. Gunarathne
+      role: President
+      image: /ananda.png
+    - name: B.G.E.T.Jayashantha
+      role: Vice President
+      image: /ananda.png
+    - name: D.S.L. Karunasekara
+      role: Secretary
+      image: /ananda.png
+    - name: P.S.Kanatthage
+      role: Treasurer
+      image: /ananda.png
+    - name: G.K.B.A.S. Karunarathna
+      role: Assistant Secretary
+      image: /ananda.png
+    - name: T.H. Jayarathne
+      role: Assistant Treasurer
+      image: /ananda.png
+    - name: Dr. L.P. Ekanayake
+      role: Editor
+      image: /ananda.png
+
 testimonials:
-  - quote: Emma's approach to UX design completely transformed our product. She has a rare ability to balance beautiful aesthetics with functional simplicity. The redesign not only looked better, but it reduced our customer support tickets by 40% and increased conversion rates across all key metrics.
+  - quote: The OAAA's astronomy workshops opened my eyes to the wonders of the universe. Their dedication to making complex astronomical concepts accessible to everyone is truly remarkable.
     author:
-      name: Sarah Chen
-      description: Product Director at Bloom Finance
+      name: Dr. Samantha Perera
+      description: Senior Astronomer, University of Colombo
       avatar:
-        src: https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80
-        srcset: https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x
-  - quote: Working with Emma was the best decision we made for our startup. She didn't just deliver designs—she challenged our assumptions, conducted thorough user research, and created an experience that truly resonated with our audience. Her technical knowledge of front-end development meant the handoff to our engineering team was seamless.
+        src: /images/testimonials/samantha.jpg
+        alt: Dr. Samantha Perera
+  - quote: As a former student of Ananda College, OAAA's mentorship program helped me pursue my passion for astrophysics. Their guidance and resources were instrumental in my academic journey.
     author:
-      name: Michael Rodriguez
-      description: Co-founder of Wavelength Music
+      name: Kavinda Silva
+      description: PhD Candidate in Astrophysics
       avatar:
-        src: https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80
-        srcset: https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x
-  - quote: Emma stands out in her ability to translate complex sustainability data into intuitive interfaces. Her work on EcoTrack wasn't just visually stunning—it fundamentally changed how our users interact with environmental information. She approaches each problem with both creativity and analytical rigor, which is exactly what we needed.
+        src: /images/testimonials/kavinda.jpg
+        alt: Kavinda Silva
+  - quote: OAAA's public stargazing events have become a highlight in Sri Lanka's science education calendar. They make astronomy accessible and exciting for everyone.
     author:
-      name: Dr. Aisha Johnson
-      description: Chief Innovation Officer at GreenTech Solutions
+      name: Prof. Nimal Gunawardena
+      description: Director, Sri Lanka Astronomical Society
       avatar:
-        src: https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80
-        srcset: https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x
-blog:
-  title: Latest Articles
-  description: Some of my recent thoughts
-faq:
-  title: Frequently Asked Questions
-  description: Answers to common questions about my process and services.
-  categories:
-    - title: Services & Process
-      questions:
-        - label: What services do you offer?
-          content: |
-            I specialize in UX/UI design and front-end development. This includes user research, wireframing, interactive prototyping, creating intuitive user interfaces, building responsive websites and web applications (especially with Vue.js/Nuxt.js), and developing design systems. My goal is to create seamless digital experiences from concept to deployment.
-        - label: What is your design process like?
-          content: |
-            My process is collaborative and iterative, typically involving stages like Discovery & Research, Ideation & Prototyping, User Testing, Visual Design, and close collaboration with development teams during implementation. I tailor the process based on project needs, always focusing on user-centered solutions.
-        - label: Do you work with startups?
-          content: |
-            Absolutely! I enjoy working with startups to help shape their product vision and create user-friendly interfaces from the ground up. I can adapt my process to fit the fast-paced startup environment.
-    - title: Pricing & Timelines
-      questions:
-        - label: How much does a project typically cost?
-          content: |
-            Project costs vary based on scope, complexity, features, and timeline. For comprehensive UX/UI design and front-end development projects, my engagements typically start around $5,000, with average projects ranging between $8,000 and $25,000. For consulting or specific design tasks, my day rate is $700.
-        - label: What are your payment terms?
-          content: |
-            I generally require a 40% deposit to schedule the project and begin work, with the remaining 60% due upon successful project completion and delivery. I accept payments via bank transfer and Stripe.
-        - label: How long does a typical project take?
-          content: |
-            Timelines depend heavily on the project's scope and complexity. Smaller projects might take 3-4 weeks, while larger, more involved projects can range from 2 to 4 months. I always provide a detailed timeline estimate after the initial discovery phase.
-        - label: Do you offer retainers or ongoing support?
-          content: |
-            Yes, for clients needing ongoing design support, feature development, or maintenance, I offer monthly retainer options tailored to specific needs. Let's discuss if this is something you're interested in.
-    - title: About Me
-      questions:
-        - label: What do you enjoy most about your work?
-          content: |
-            I love the challenge of solving complex problems through design and technology. It's incredibly rewarding to see people interact with something I've created and find it genuinely useful and easy to navigate. Bridging the gap between user needs and technical possibilities is what truly excites me.
-        - label: What are your hobbies outside of work?
-          content: |
-            When I'm not designing or coding, I enjoy exploring Boston's neighborhoods, trying out new coffee shops, and hiking in the nearby reservations. I'm also passionate about photography and occasionally contribute to open-source projects.
+        src: /images/testimonials/nimal.jpg
+        alt: Prof. Nimal Gunawardena
