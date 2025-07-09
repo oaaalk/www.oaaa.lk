@@ -11,6 +11,9 @@ importers:
 
   .:
     dependencies:
+      '@iconify-json/heroicons':
+        specifier: ^1.2.2
+        version: 1.2.2
       '@iconify-json/lucide':
         specifier: ^1.2.54
         version: 1.2.54
@@ -45,6 +48,12 @@ importers:
         specifier: ^5.1.8
         version: 5.1.8(@unhead/vue@2.0.11(vue@3.5.17(typescript@5.8.3)))(magicast@0.3.5)(unstorage@1.16.0(db0@0.3.2(better-sqlite3@12.2.0))(ioredis@5.6.1))(vite@6.3.5(@types/node@24.0.7)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3))
     devDependencies:
+      '@iconify-icons/ph':
+        specifier: ^1.2.5
+        version: 1.2.5
+      '@iconify-json/ph':
+        specifier: ^1.2.2
+        version: 1.2.2
       '@nuxt/eslint':
         specifier: ^1.4.1
         version: 1.4.1(@typescript-eslint/utils@8.35.0(eslint@9.30.0(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.17)(eslint@9.30.0(jiti@2.4.2))(magicast@0.3.5)(typescript@5.8.3)(vite@6.3.5(@types/node@24.0.7)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))
@@ -514,8 +523,17 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
+  '@iconify-icons/ph@1.2.5':
+    resolution: {integrity: sha512-Ox2VkJDoFowrf0e74LlLUuLMiN73PsCN28MUx9wCQfyZAFrL8ntfBnMpzukfi/0vN9qpJKAiKYZ3dQ5JjBqt/A==}
+
+  '@iconify-json/heroicons@1.2.2':
+    resolution: {integrity: sha512-qoW4pXr5kTTL6juEjgTs83OJIwpePu7q1tdtKVEdj+i0zyyVHgg/dd9grsXJQnpTpBt6/VwNjrXBvFjRsKPENg==}
+
   '@iconify-json/lucide@1.2.54':
     resolution: {integrity: sha512-sUHvGWE0WI+XVew//03Y1jw7AFRv57X1BFxrLBdjwt9xccr4Y2JartcWXM/Zeinxrr3ZgBt0n16WkeN/fx9QAQ==}
+
+  '@iconify-json/ph@1.2.2':
+    resolution: {integrity: sha512-PgkEZNtqa8hBGjHXQa4pMwZa93hmfu8FUSjs/nv4oUU6yLsgv+gh9nu28Kqi8Fz9CCVu4hj1MZs9/60J57IzFw==}
 
   '@iconify-json/simple-icons@1.2.41':
     resolution: {integrity: sha512-4tt29cKzNsxvt6rjAOVhEgpZV0L8jleTDTMdtvIJjF14Afp9aH8peuwGYyX35l6idfFwuzbvjSVfVyVjJtfmYA==}
@@ -6286,7 +6304,19 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
+  '@iconify-icons/ph@1.2.5':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/heroicons@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/lucide@1.2.54':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/ph@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 

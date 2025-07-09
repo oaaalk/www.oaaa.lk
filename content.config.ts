@@ -79,7 +79,18 @@ export default defineContentConfig({
             image: z.string()
           }))
         }),
-        testimonials: z.array(createTestimonialSchema())
+        testimonials: z.array(createTestimonialSchema()),
+        faq: z.object({
+          title: z.string(),
+          description: z.string(),
+          categories: z.array(z.object({
+            title: z.string(),
+            questions: z.array(z.object({
+              label: z.string(),
+              content: z.string()
+            }))
+          }))
+        })
       })
     }),
     projects: defineCollection({
@@ -89,7 +100,29 @@ export default defineContentConfig({
         title: z.string(),
         description: z.string(),
         date: z.string(),
-        image: z.string().nonempty().editor({ input: 'media' }),
+        image: z.string(),
+        category: z.string(),
+        status: z.string(),
+        tags: z.array(z.string()).optional(),
+        participants: z.string().optional(),
+        age_range: z.string().optional(),
+        locations: z.string().optional(),
+        success_rate: z.string().optional(),
+        year: z.union([z.number(), z.string()]).optional(),
+        scope: z.string().optional(),
+        legacy: z.string().optional(),
+        format: z.string().optional(),
+        duration: z.string().optional(),
+        location: z.string().optional(),
+        frequency: z.string().optional(),
+        motto: z.string().optional(),
+        external_link: z.string().optional(),
+        reach: z.string().optional(),
+        impact: z.string().optional(),
+        languages: z.string().optional(),
+        users: z.string().optional(),
+        courses: z.string().optional(),
+        organizers: z.array(z.string()).optional(),
         author: createAuthorSchema().optional()
       })
     }),
@@ -108,10 +141,15 @@ export default defineContentConfig({
       source: [
         { include: 'projects.yml' },
         { include: 'blog.yml' },
-        { include: 'events.yml' }
+        { include: 'events.yml' },
+        { include: 'pages/*.md' }
       ],
       schema: z.object({
-        links: z.array(createButtonSchema())
+        links: z.array(createButtonSchema()).optional(),
+        seo: z.object({
+          title: z.string().optional(),
+          description: z.string().optional()
+        }).optional()
       })
     }),
     events: defineCollection({

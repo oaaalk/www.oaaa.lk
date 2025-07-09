@@ -13,7 +13,7 @@ hero:
     - label: Join OAAA
       to: /about
       icon: i-heroicons-user-plus
-      color: primary
+      color: neutral
     - label: Events
       to: /events
       icon: i-heroicons-calendar
@@ -38,7 +38,7 @@ about:
     - label: Learn More
       to: /about
       icon: i-heroicons-arrow-right
-      color: primary
+      color: "neutral"
 
 mission:
   title: Our Mission
@@ -63,14 +63,14 @@ experience:
         url: https://anandacollege.edu.lk
         color: '#F59E42'
     - position: Anandian Astronomical Association Founded
-      date: 1990s
+      date: 1998
       company:
         name: AAA
         logo: i-ph-telescope
         url: /about
         color: '#4F46E5'
-    - position: Old Anandians' Astronomical Association Founded
-      date: 2018
+    - position: OAAA Founded
+      date: 2004
       company:
         name: OAAA
         logo: i-ph-users-three
@@ -79,7 +79,7 @@ experience:
     - position: OAAA Affiliates with OBA
       date: 2025
       company:
-        name: OBA Affiliation
+        name: ACOBA
         logo: i-ph-link
         url: /about
         color: '#5E6AD2'
@@ -132,3 +132,41 @@ testimonials:
       avatar:
         src: /images/testimonials/nimal.jpg
         alt: Prof. Nimal Gunawardena
+
+faq:
+  title: Frequently Asked Questions
+  description: Common questions about the Old Anandians' Astronomical Association
+  categories:
+    - title: General
+      questions:
+        - label: What is OAAA?
+          content: |
+            The Old Anandians' Astronomical Association (OAAA) is an organization that unites alumni of Ananda College, Colombo, who share a passion for astronomy. We promote astronomical education and scientific inquiry among Anandians and the broader Sri Lankan community.
+        - label: How can I join OAAA?
+          content: |
+            To join OAAA, you must be an alumnus of Ananda College, Colombo. You can contact us through our official channels or attend one of our events to learn more about membership requirements and the application process.
+        - label: What activities does OAAA organize?
+          content: |
+            OAAA organizes various activities including public stargazing events, astronomy workshops, educational seminars, telescope demonstrations, and collaborative projects with schools and universities to promote astronomical education.
+    - title: Events & Programs
+      questions:
+        - label: Are OAAA events open to the public?
+          content: |
+            Yes, many of our events are open to the public, especially our stargazing sessions and educational workshops. We believe in making astronomy accessible to everyone, regardless of their background or experience level.
+        - label: Do I need my own telescope to participate?
+          content: |
+            No, you don't need your own telescope. OAAA provides telescopes and equipment for our events. However, if you have your own equipment, you're welcome to bring it along to our stargazing sessions.
+        - label: How often does OAAA organize events?
+          content: |
+            We organize events regularly throughout the year, with major stargazing sessions typically scheduled around significant astronomical events like meteor showers, eclipses, and planetary alignments.
+    - title: Education & Outreach
+      questions:
+        - label: Does OAAA offer educational programs for schools?
+          content: |
+            Yes, we actively collaborate with schools to provide astronomy education programs. We visit schools to conduct workshops, provide telescope demonstrations, and inspire young minds to explore the wonders of the universe.
+        - label: Can students participate in OAAA research projects?
+          content: |
+            We encourage student participation in our research and observational projects. Students can contribute to citizen science initiatives and learn practical astronomy skills through hands-on experience.
+        - label: How does OAAA support aspiring astronomers?
+          content: |
+            OAAA provides mentorship programs, educational resources, and networking opportunities for aspiring astronomers. We connect students with experienced professionals and provide guidance for pursuing careers in astronomy and related fields.

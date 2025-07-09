@@ -11,7 +11,7 @@ export default defineAppConfig({
   },
   ui: {
     colors: {
-      primary: 'blue',
+      primary: 'neutral',
       neutral: 'neutral'
     }
   },
@@ -28,25 +28,22 @@ export default defineAppConfig({
     credits: `Copyright © ${new Date().getFullYear()}`,
     colorMode: false,
     links: [{
-      'icon': 'i-simple-icons-nuxtdotjs',
-      'to': 'https://nuxt.com',
+      'icon': 'i-simple-icons-facebook',
+      'to': 'https://facebook.com',
       'target': '_blank',
-      'aria-label': 'Nuxt Website'
+      'aria-label': 'OAAA Facebook'
     }, {
-      'icon': 'i-simple-icons-discord',
-      'to': 'https://discord.com/invite/ps2h6QT',
+      'icon': 'i-simple-icons-instagram',
+      'to': ' https://www.instagram.com',
       'target': '_blank',
-      'aria-label': 'Nuxt UI on Discord'
-    }, {
-      'icon': 'i-simple-icons-x',
-      'to': 'https://x.com/nuxt_js',
+      'aria-label': 'OAAA instagram'
+    },
+    {
+      'icon': 'i-simple-icons-youtube',
+      'to': ' https://www.youtube.com',
       'target': '_blank',
-      'aria-label': 'Nuxt on X'
-    }, {
-      'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt/ui',
-      'target': '_blank',
-      'aria-label': 'Nuxt UI on GitHub'
-    }]
+      'aria-label': 'OAAA Youtube'
+    }
+    ]
   }
 })

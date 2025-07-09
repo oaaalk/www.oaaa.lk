@@ -37,6 +37,9 @@ function formatDate(dateString: any) {
     day: 'numeric'
   })
 }
+
+const { copy } = useClipboard()
+const { copyToClipboard } = useToast()
 </script>
 
 <template>

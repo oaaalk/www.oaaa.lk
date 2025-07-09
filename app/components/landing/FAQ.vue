@@ -1,18 +1,39 @@
 <script setup lang="ts">
 import type { IndexCollectionItem } from '@nuxt/content'
 
+interface FAQItem {
+  label: string
+  content: string
+}
+
+interface FAQCategory {
+  title: string
+  questions: FAQItem[]
+}
+
+interface ExtendedIndexCollectionItem extends IndexCollectionItem {
+  faq?: {
+    title: string
+    description: string
+    categories: FAQCategory[]
+  }
+}
+
 const props = defineProps<{
-  page: IndexCollectionItem
+  page: ExtendedIndexCollectionItem
 }>()
 
 const items = computed(() => {
-  return props.page.faq?.categories.map((faq) => {
+  return props.page.faq?.categories?.map((faq: FAQCategory) => {
     return {
       label: faq.title,
       key: faq.title.toLowerCase(),
-      questions: faq.questions
+      questions: faq.questions.map((question: FAQItem) => ({
+        label: question.label,
+        content: question.content
+      }))
     }
-  })
+  }) || []
 })
 
 const ui = {
@@ -26,6 +47,7 @@ const ui = {
 
 <template>
   <UPageSection
+    v-if="page.faq && items.length > 0"
     :title="page.faq.title"
     :description="page.faq.description"
     :ui="{
@@ -41,7 +63,7 @@ const ui = {
     >
       <template #content="{ item }">
         <UPageAccordion
-          trailing-icon="lucide:plus"
+          trailing-icon="i-lucide-plus"
           :items="item.questions"
           :ui="{
             item: 'border-none',
@@ -49,12 +71,13 @@ const ui = {
             trailingIcon: 'group-data-[state=closed]:rotate-0 group-data-[state=open]:rotate-135'
           }"
         >
-          <template #body="{ item: _item }">
-            <MDC
-              :value="_item.content"
-              unwrap="p"
-              class="px-4"
-            />
+          <template #item="{ item: _item }">
+            <div class="px-4 py-2">
+              <MDC
+                :value="_item.content || ''"
+                class="prose prose-sm max-w-none text-muted leading-relaxed [&>p]:mb-2 [&>ul]:mb-2 [&>ol]:mb-2 [&>li]:mb-1"
+              />
+            </div>
           </template>
         </UPageAccordion>
       </template>

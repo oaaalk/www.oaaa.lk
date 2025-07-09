@@ -21,20 +21,18 @@ defineProps<{
     v-if="board"
     class="space-y-6"
   >
-    <!-- Section Header -->
-    <div>
-      <h2 class="text-3xl font-bold tracking-tight text-highlighted">
-        {{ board.title }}
-      </h2>
-      <p
-        v-if="board.description"
-        class="text-muted text-lg mt-4"
-      >
-        {{ board.description }}
-      </p>
-    </div>
+    <UPageSection
+      :title="board.title"
+      :description="board.description"
+      :ui="{
+        container: '!p-0',
+        title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
+        description: 'text-left mt-3 text-sm sm:text-md lg:text-sm text-muted'
+      }"
+    />
+
     <!-- Officials Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
       <div
         v-for="official in board.officials"
         :key="official.name"
