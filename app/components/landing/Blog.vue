@@ -33,7 +33,7 @@ if (!posts.value) {
         orientation="horizontal"
         variant="naked"
         v-bind="post"
-        :to="post._path"
+        :to="post.path"
         :ui="{
           root: 'group relative lg:items-start lg:flex ring-0 hover:ring-0',
           body: '!px-0',
@@ -46,6 +46,7 @@ if (!posts.value) {
             variant="link"
             class="px-0 gap-0"
             label="View Event"
+            :to="post.path"
           >
             <template #trailing>
               <UIcon
