@@ -34,52 +34,6 @@ const createTestimonialSchema = () => z.object({
   author: createAuthorSchema()
 })
 
-const createEventSchema = () => z.object({
-  category: z.enum(['Educational Program', 'Community Outreach', 'Youth Education', 'Workshop', 'Competition', 'Public Event', 'Educational', 'Conference', 'Research']),
-  title: z.string(),
-  date: z.date(),
-  end_date: z.date().optional(),
-  time: z.string().optional(),
-  location: z.string(),
-  description: z.string(),
-  image: z.string().optional(),
-  url: z.string().optional(),
-  status: z.enum(['Ongoing', 'Upcoming', 'Completed']).optional(),
-  registration_open: z.boolean().optional(),
-  spots_available: z.number().optional(),
-  next_location: z.string().optional(),
-  communities_remaining: z.number().optional(),
-  age_range: z.string().optional(),
-  instructor: z.string().optional(),
-  equipment_provided: z.boolean().optional(),
-  prerequisites: z.string().optional(),
-  registration_opens: z.string().optional(),
-  categories: z.array(z.string()).optional(),
-  prizes: z.string().optional(),
-  transportation: z.string().optional(),
-  what_to_bring: z.array(z.string()).optional(),
-  weather_dependent: z.boolean().optional(),
-  global_event: z.boolean().optional(),
-  free_admission: z.boolean().optional(),
-  family_friendly: z.boolean().optional(),
-  international_speakers: z.number().optional(),
-  call_for_papers: z.string().optional(),
-  participants: z.number().optional(),
-  winner: z.string().optional(),
-  highlights: z.string().optional(),
-  attendance: z.number().optional(),
-  media_coverage: z.string().optional(),
-  safety_record: z.string().optional(),
-  telescopes_built: z.number().optional(),
-  completion_rate: z.string().optional(),
-  follow_up: z.string().optional(),
-  activities: z.number().optional(),
-  parent_feedback: z.string().optional(),
-  data_points_collected: z.number().optional(),
-  asteroids_observed: z.number().optional(),
-  international_collaboration: z.string().optional()
-})
-
 export default defineContentConfig({
   collections: {
     index: defineCollection({
@@ -129,15 +83,14 @@ export default defineContentConfig({
       })
     }),
     projects: defineCollection({
-      type: 'data',
-      source: 'projects/*.yml',
+      type: 'page',
+      source: 'projects/*.md',
       schema: z.object({
-        title: z.string().nonempty(),
-        description: z.string().nonempty(),
+        title: z.string(),
+        description: z.string(),
+        date: z.string(),
         image: z.string().nonempty().editor({ input: 'media' }),
-        url: z.string().nonempty(),
-        tags: z.array(z.string()),
-        date: z.date()
+        author: createAuthorSchema().optional()
       })
     }),
     blog: defineCollection({
@@ -154,7 +107,8 @@ export default defineContentConfig({
       type: 'page',
       source: [
         { include: 'projects.yml' },
-        { include: 'blog.yml' }
+        { include: 'blog.yml' },
+        { include: 'events.yml' }
       ],
       schema: z.object({
         links: z.array(createButtonSchema())
@@ -162,39 +116,31 @@ export default defineContentConfig({
     }),
     events: defineCollection({
       type: 'page',
-      source: 'speaking.yml',
+      source: 'events/*.md',
       schema: z.object({
-        links: z.array(createButtonSchema()),
-        ongoing_events: z.object({
-          title: z.string(),
-          description: z.string(),
-          events: z.array(createEventSchema())
-        }),
-        upcoming_events: z.object({
-          title: z.string(),
-          description: z.string(),
-          events: z.array(createEventSchema())
-        }),
-        completed_events: z.object({
-          title: z.string(),
-          description: z.string(),
-          events: z.array(createEventSchema())
-        }),
-        event_statistics: z.object({
-          title: z.string(),
-          stats: z.array(z.object({
-            label: z.string(),
-            value: z.string(),
-            icon: z.string()
-          }))
-        }),
-        newsletter_signup: z.object({
-          title: z.string(),
-          description: z.string(),
-          placeholder: z.string(),
-          button_text: z.string(),
-          frequency: z.string()
-        })
+        title: z.string(),
+        description: z.string().optional(),
+        date: z.string(),
+        endDate: z.string().optional(),
+        status: z.string(),
+        category: z.string(),
+        location: z.string(),
+        image: z.string().optional(),
+        time: z.string().optional(),
+        duration: z.string().optional(),
+        level: z.string().optional(),
+        equipment: z.string().optional(),
+        instructor: z.string().optional(),
+        registrationOpen: z.boolean().optional(),
+        registrationOpens: z.string().optional(),
+        registrationDeadline: z.string().optional(),
+        spotsAvailable: z.number().optional(),
+        participants: z.number().optional(),
+        feedback: z.string().optional(),
+        contact: z.string().optional(),
+        teamSize: z.string().optional(),
+        prizes: z.string().optional(),
+        author: z.any().optional()
       })
     }),
     about: defineCollection({

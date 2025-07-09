@@ -15,6 +15,11 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/main.css'],
+  content: {
+    preview: {
+      api: 'https://api.nuxt.studio'
+    }
+  },
 
   future: {
     compatibilityVersion: 4
@@ -28,11 +33,6 @@ export default defineNuxtConfig({
         '/'
       ],
       crawlLinks: true
-    }
-  },
-  content: {
-    preview: {
-      api: 'https://api.nuxt.studio'
     }
   },
   eslint: {
