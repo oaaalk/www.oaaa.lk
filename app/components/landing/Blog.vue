@@ -5,11 +5,11 @@ defineProps<{
   page: IndexCollectionItem
 }>()
 
-const { data: posts } = await useAsyncData('index-blogs', () =>
-  queryCollection('blog').order('date', 'DESC').limit(3).all()
+const { data: posts } = await useAsyncData('index-events', () =>
+  queryCollection('events').order('date', 'DESC').limit(3).all()
 )
 if (!posts.value) {
-  throw createError({ statusCode: 404, statusMessage: 'blogs posts not found', fatal: true })
+  throw createError({ statusCode: 404, statusMessage: 'events not found', fatal: true })
 }
 </script>
 
@@ -33,7 +33,7 @@ if (!posts.value) {
         orientation="horizontal"
         variant="naked"
         v-bind="post"
-        :to="post.path"
+        :to="post._path"
         :ui="{
           root: 'group relative lg:items-start lg:flex ring-0 hover:ring-0',
           body: '!px-0',
@@ -45,7 +45,7 @@ if (!posts.value) {
             size="xs"
             variant="link"
             class="px-0 gap-0"
-            label="Read Article"
+            label="View Event"
           >
             <template #trailing>
               <UIcon

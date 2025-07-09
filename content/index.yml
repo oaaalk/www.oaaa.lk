@@ -110,6 +110,10 @@ board:
       role: Editor
       image: /ananda.png
 
+blog:
+  title: Latest Events
+  description: Discover upcoming astronomy events, workshops, and stargazing sessions organized by OAAA
+
 testimonials:
   - quote: The OAAA's astronomy workshops opened my eyes to the wonders of the universe. Their dedication to making complex astronomical concepts accessible to everyone is truly remarkable.
     author:

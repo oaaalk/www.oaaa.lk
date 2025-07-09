@@ -79,6 +79,7 @@ export default defineContentConfig({
             image: z.string()
           }))
         }),
+        blog: createBaseSchema(),
         testimonials: z.array(createTestimonialSchema()),
         faq: z.object({
           title: z.string(),

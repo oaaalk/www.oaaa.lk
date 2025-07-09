@@ -82,6 +82,9 @@ useSeoMeta({
       <Board :board="page.board" />
     </UPageSection>
 
+    <!-- Blog Section -->
+    <LandingBlog :page />
+
     <!-- Testimonials Section -->
     <LandingTestimonials :page />
 
