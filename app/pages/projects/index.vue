@@ -1,39 +1,40 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-const { data: projects } = await useAsyncData('projects', () =>
+const { data: projectsRaw } = await useAsyncData('projects', () =>
   queryCollection('projects').all()
 )
 
-const projectsArray = computed<Project[]>(() => {
-  return (projects.value ?? []).map((project: any) => ({
+const projects = computed(() => {
+  return (projectsRaw.value ?? []).map((project: any) => ({
     ...project,
-    path: project._path || project.path || project.url || ''
-  })) as Project[]
+    url: project._path || project.path || project.url || '',
+    image: project.image || '',
+    date: project.date || ''
+  }))
 })
 
-const { data: page } = await useAsyncData('projects-page', () => {
+const { data: pageRaw } = await useAsyncData('projects-page', () => {
   return queryCollection('pages').path('/projects').first()
 })
 
-// Project type
-type Project = {
-  title: string
-  status?: string
-  date?: string
-  endDate?: string
-  category?: string
-  location?: string
-  image?: string
-  time?: string
-  registrationOpen?: boolean
-  registrationOpens?: string
-  spotsAvailable?: number
-  participants?: number
-  feedback?: string
-  path?: string
-  description?: string
-  icon?: string // Optional icon for card
+const page = computed(() => {
+  if (pageRaw.value) return { ...pageRaw.value, links: pageRaw.value.links ?? [] }
+  return {
+    title: 'Projects',
+    description: 'Explore our astronomy projects, initiatives, and collaborations',
+    links: [],
+    seo: {
+      title: 'Projects',
+      description: 'Explore our astronomy projects, initiatives, and collaborations'
+    }
+  }
+})
+
+// Dummy global object for demonstration; replace with your actual global config if needed
+const global = {
+  meetingLink: page.value.links[0]?.to || '/',
+  email: 'info@oaaa.lk'
 }
 
 useSeoMeta({
@@ -42,127 +43,87 @@ useSeoMeta({
   description: page.value?.seo?.description || page.value?.description || 'Explore our astronomy projects, initiatives, and collaborations',
   ogDescription: page.value?.seo?.description || page.value?.description || 'Explore our astronomy projects, initiatives, and collaborations'
 })
-
-// Fallback page data if page is not found
-const pageData = computed(() => {
-  if (page.value) return { ...page.value, links: page.value.links ?? [] }
-  return {
-    title: 'Projects',
-    description: 'Explore our astronomy projects, initiatives, and collaborations',
-    links: []
-  }
-})
 </script>
 
 <template>
   <UPage>
     <UPageHero
-      :title="pageData.title"
-      :description="pageData.description"
-      :links="pageData.links"
+      :title="page.title"
+      :description="page.description"
+      :links="page.links"
       :ui="{
         title: '!mx-0 text-left',
         description: '!mx-0 text-left',
         links: 'justify-start'
       }"
-    />
-    <UPageSection :ui="{ container: '!pt-0' }">
-      <div
-        v-if="projectsArray.length"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+    >
+      <template #links>
+        <div
+          v-if="page.links && page.links.length > 0"
+          class="flex items-center gap-2"
+        >
+          <UButton
+            v-if="page.links[0]"
+            :to="global.meetingLink"
+            v-bind="page.links[0]"
+          />
+          <UButton
+            v-if="page.links[1]"
+            :to="`mailto:${global.email}`"
+            v-bind="page.links[1]"
+          />
+        </div>
+      </template>
+    </UPageHero>
+    <UPageSection
+      :ui="{
+        container: '!pt-0'
+      }"
+    >
+      <Motion
+        v-for="(project, index) in projects"
+        :key="project.title"
+        :initial="{ opacity: 0, transform: 'translateY(10px)' }"
+        :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
+        :transition="{ delay: 0.2 * index }"
+        :in-view-options="{ once: true }"
       >
-        <UCard
-          v-for="project in projectsArray"
-          :key="project.title"
-          :to="project.path"
-          class="group hover:shadow-lg transition-all duration-300 overflow-hidden"
+        <UPageCard
+          :title="project.title"
+          :description="project.description"
+          :to="project.url"
+          orientation="horizontal"
+          variant="naked"
+          :reverse="index % 2 === 1"
+          class="group"
           :ui="{
-            header: { padding: '!p-0' },
-            body: { padding: 'p-6' },
-            footer: { padding: 'px-6 pb-6' }
+            wrapper: 'max-sm:order-last'
           }"
         >
-          <template #header>
-            <div class="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-800">
-              <img
-                v-if="project.image"
-                :src="project.image"
-                :alt="project.title"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              >
-              <div
-                v-else
-                class="w-full h-full flex items-center justify-center"
-              >
-                <UIcon
-                  name="i-heroicons-telescope"
-                  class="text-4xl text-gray-400"
-                />
-              </div>
-            </div>
+          <template #leading>
+            <span class="text-sm text-muted">
+              {{ project.date ? new Date(project.date).getFullYear() : '' }}
+            </span>
           </template>
-
-          <div class="space-y-3">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-primary-600 transition-colors">
-              {{ project.title }}
-            </h3>
-            <p
-              v-if="project.description"
-              class="text-sm text-gray-600 dark:text-gray-300 line-clamp-2"
-            >
-              {{ project.description }}
-            </p>
-            <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
-              <span v-if="project.date">{{ new Date(project.date).toLocaleDateString() }}</span>
-              <span v-if="project.category">{{ project.category }}</span>
-            </div>
-          </div>
-
           <template #footer>
-            <div class="flex items-center justify-between">
-              <UBadge
-                v-if="project.status"
-                :color="project.status === 'completed' ? 'green' : project.status === 'active' ? 'blue' : 'gray'"
-                variant="subtle"
-                size="sm"
-              >
-                {{ project.status }}
-              </UBadge>
-              <UButton
-                icon="i-heroicons-arrow-right"
-                size="sm"
-                color="gray"
-                variant="ghost"
-                trailing
-                :to="project.path"
-              >
-                View Project
-              </UButton>
-            </div>
+            <ULink
+              :to="project.url"
+              class="text-sm text-primary flex items-center"
+            >
+              View Project
+              <UIcon
+                name="i-lucide-arrow-right"
+                class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
+              />
+            </ULink>
           </template>
-        </UCard>
-      </div>
-      <div
-        v-else
-        class="text-center py-16"
-      >
-        <UIcon
-          name="i-lucide-folder-x"
-          class="text-6xl text-gray-400 mx-auto mb-4"
-        />
-        <h3 class="text-2xl font-bold text-gray-700 mb-2">
-          No Projects Found
-        </h3>
-        <p class="text-gray-500 mb-6">
-          Check back soon for exciting new projects!
-        </p>
-        <UButton
-          to="/"
-          label="Back to Home"
-          color="primary"
-          size="lg"
-        />
-      </div>
+          <img
+            :src="project.image"
+            :alt="project.title"
+            class="object-cover w-full h-48 rounded-lg"
+          >
+        </UPageCard>
+      </Motion>
     </UPageSection>
   </UPage>
 </template>
