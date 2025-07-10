@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { Ref } from 'vue'
 import type { ContentNavigationItem } from '@nuxt/content'
 import { findPageBreadcrumb, mapContentNavigation } from '#ui-pro/utils/content'
 
@@ -39,7 +40,7 @@ useSeoMeta({
   ogTitle: title
 })
 
-const articleLink = computed(() => `${window?.location}`)
+const articleLink = computed(() => typeof window !== 'undefined' ? window.location.href : '')
 
 const formatDate = (dateString: string) => {
   return new Date(dateString).toLocaleDateString('en-US', {
@@ -47,6 +48,17 @@ const formatDate = (dateString: string) => {
     month: 'short',
     day: 'numeric'
   })
+}
+
+async function copyToClipboard(text: string, message: string) {
+  if (import.meta.client && navigator.clipboard) {
+    try {
+      await navigator.clipboard.writeText(text)
+      console.log(message)
+    } catch (err) {
+      console.error('Failed to copy: ', err)
+    }
+  }
 }
 </script>
 
@@ -109,7 +121,7 @@ const formatDate = (dateString: string) => {
               @click="copyToClipboard(articleLink, 'Article link copied to clipboard')"
             />
           </div>
-          <UContentSurround :surround />
+          <UContentSurround :surround="surround" />
         </UPageBody>
       </UPage>
     </UContainer>

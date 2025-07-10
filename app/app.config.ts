@@ -1,12 +1,19 @@
 export default defineAppConfig({
-  global: false,
+  global: {
+    picture: {
+      dark: 'oaaa.jpg',
+      light: 'oaaa.jpg',
+      alt: 'OAAA Logo'
+    },
+    meetingLink: 'https://cal.com/',
+    email: 'astroananda@gmail.com',
+    available: true
+  },
   ui: {
     colors: {
       primary: 'neutral',
       neutral: 'neutral'
-    },
-
-    icons: ''
+    }
   },
   uiPro: {
     pageHero: {
