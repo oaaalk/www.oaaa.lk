@@ -1,15 +1,17 @@
 ---
-title: "The Unseen Sun - නොදුටු හිරු"
-description: "A groundbreaking sun observation project jointly organized by the Anandian Astronomical Association (AAA) and Old Anandian Astronomical Association (OAAA)."
-image: /images/projects/unseen-sun.jpg
+title: The Unseen Sun - නොදුටු හිරු
+description: A groundbreaking sun observation project jointly organized by the
+  Anandian Astronomical Association (AAA) and Old Anandian Astronomical
+  Association (OAAA).
+image: /images/events/516774880-10223807726741051-8950123606551236012-n.jpg
 category: Educational Program
 status: Active
-date: "2025-07-07"
-location: "Ananda College, Sathmahala Premises"
-duration: "July 7, 8, 9, 11 (1:45 PM - 3:30 PM)"
+date: 2025-07-07
+location: Ananda College, Sathmahala Premises
+duration: July 7, 8, 9, 11 (1:45 PM - 3:30 PM)
 organizers:
-  - "Anandian Astronomical Association (AAA)"
-  - "Old Anandian Astronomical Association (OAAA)"
+  - Anandian Astronomical Association (AAA)
+  - Old Anandian Astronomical Association (OAAA)
 tags:
   - Solar Observation
   - Student Education
@@ -27,38 +29,46 @@ Running from July 7-11, 2025, at Ananda College's historic Sathmahala Premises, 
 ## Objectives
 
 ### Safe Solar Observation Education
+
 Teach students proper techniques and safety protocols for solar observation using specialized equipment and filters.
 
 ### Scientific Methodology Training
+
 Introduce participants to systematic observation techniques, data recording, and scientific analysis methods.
 
 ### Solar Phenomena Understanding
+
 Provide comprehensive education about solar structures, solar cycles, and space weather impacts on Earth.
 
 ### Heritage Preservation
+
 Honor Ananda College's rich scientific heritage dating back to 1886 while inspiring future generations of astronomers.
 
 ## Program Schedule
 
 ### July 7, 2025
+
 - Opening ceremony and safety briefing
 - Introduction to solar astronomy
 - Equipment familiarization
 - First observation session
 
 ### July 8, 2025
+
 - Advanced observation techniques
 - Solar photography workshop
 - Data recording methods
 - Group observation projects
 
 ### July 9, 2025
+
 - Solar phenomena identification
 - Scientific analysis workshop
 - Student presentations
-- Interactive Q&A sessions
+- Interactive Q\&A sessions
 
 ### July 11, 2025
+
 - Culminating observation session
 - Project presentations
 - Certificate ceremony
@@ -67,6 +77,7 @@ Honor Ananda College's rich scientific heritage dating back to 1886 while inspir
 ## Equipment and Safety
 
 ### Equipment
+
 - Dedicated solar telescopes with H-alpha filters
 - White-light solar filters for sunspot observation
 - Digital cameras for solar photography
@@ -74,6 +85,7 @@ Honor Ananda College's rich scientific heritage dating back to 1886 while inspir
 - Data recording materials and computers
 
 ### Safety Measures
+
 Safety is our paramount concern in all solar observation activities. All participants receive comprehensive safety training before handling any equipment. We use only certified solar filters and telescopes specifically designed for solar observation. Never attempt to look at the Sun through unfiltered telescopes or cameras. All observation sessions are supervised by experienced astronomers and safety officers.
 
 ## Educational Impact
@@ -100,14 +112,12 @@ The success of the Unseen Sun project will inform future solar observation progr
 
 ## Contact Information
 
-- **Email**: info@oaaa.lk
+- **Email**: <info@oaaa.lk>
 - **Phone**: +94 11 2 XXX XXX
 - **Location**: Ananda College, Colombo 10, Sri Lanka
 
 ---
 
-*"The Unseen Sun project opened my eyes to the dynamic nature of our star. I never knew the Sun was so active and complex!"*  
-— Student Participant, Sakwala25
+*"The Unseen Sun project opened my eyes to the dynamic nature of our star. I never knew the Sun was so active and complex!"*:br — Student Participant, Sakwala25
 
-*"This collaboration between current and former students creates an inspiring learning environment that I wish existed when I was in school."*  
-— OAAA Member and Mentor
+*"This collaboration between current and former students creates an inspiring learning environment that I wish existed when I was in school."*:br — OAAA Member and Mentor
