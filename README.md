@@ -1,38 +1,36 @@
-# Nuxt Portfolio Template
+# OAAA Official Website
 
-[![Nuxt UI Pro](https://img.shields.io/badge/Made%20with-Nuxt%20UI%20Pro-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com/pro)
-[![Deploy to NuxtHub](https://img.shields.io/badge/Deploy%20to-NuxtHub-00DC82?logo=nuxt&labelColor=020420)](https://hub.nuxt.com/new?repo=nuxt-ui-pro/portfolio)
+[![OAAA](https://img.shields.io/badge/Official%20Site-OAAA-00DC82?labelColor=020420)](https://oaaalk.nuxt.space/)
+[![Open Source](https://img.shields.io/badge/Open%20Source-GitHub-00DC82?logo=github&labelColor=020420)](https://github.com/astroananda/www.oaaa.lk)
 
-Use this template to create your own portfolio with [Nuxt UI Pro](https://ui.nuxt.com/pro).
+This is the official open source website and template for the **Ananda College Astronomical Association (OAAA)**. It is built with [Nuxt 3](https://nuxt.com/) and [Nuxt UI](https://ui.nuxt.com/) and serves as the digital home for OAAA's events, projects, blog, and community.
 
-- [Live demo](https://portfolio-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/getting-started/installation/pro/nuxt)
+- 🌐 [Live Website](https://oaaalk.nuxt.space/)
+- 📖 [OAAA Facebook](https://www.facebook.com/profile.php?id=61574129990479)
+- 📸 [OAAA Instagram](https://www.instagram.com/astro_ananda/)
+- 📺 [OAAA YouTube](https://www.youtube.com/user/astroananda)
 
-<a href="https://portfolio-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg?theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg?theme=light">
-    <img alt="Nuxt Portfolio Template" src="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg">
-  </picture>
-</a>
+## About OAAA
+
+The Ananda College Astronomical Association (OAAA) is one of Sri Lanka's leading school astronomy clubs, organizing events, educational programs, and outreach for students and the public. This website is the central hub for all OAAA activities, news, and resources.
 
 ## Quick Start
 
-```bash [Terminal]
-npx nuxi init -t github:nuxt-ui-pro/portfolio
+```bash
+npx nuxi init -t github:astroananda/www.oaaa.lk
 ```
 
 ## Setup
 
-Make sure to install the dependencies:
+Install dependencies:
 
 ```bash
 pnpm install
 ```
 
-## Development Server
+## Development
 
-Start the development server on `http://localhost:3000`:
+Start the development server:
 
 ```bash
 pnpm dev
@@ -46,14 +44,16 @@ Build the application for production:
 pnpm build
 ```
 
-Locally preview production build:
+Preview the production build locally:
 
 ```bash
 pnpm preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Contributing
 
-## Renovate integration
+We welcome contributions! Please open issues or pull requests on [GitHub](https://github.com/astroananda/www.oaaa.lk).
 
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+## License
+
+This project is open source and available under the MIT License.
