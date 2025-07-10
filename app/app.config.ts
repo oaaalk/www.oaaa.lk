@@ -1,14 +1,5 @@
 export default defineAppConfig({
-  global: {
-    picture: {
-      dark: 'oaaa.jpg',
-      light: 'oaaa.jpg',
-      alt: 'My profile picture'
-    },
-    meetingLink: 'https://cal.com/',
-    email: 'ui-pro@nuxt.com',
-    available: true
-  },
+  global: '',
   ui: {
     colors: {
       primary: 'neutral',
