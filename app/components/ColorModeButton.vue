@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
+const { ui } = useAppConfig()
 
 const nextTheme = computed(() => (colorMode.value === 'dark' ? 'light' : 'dark'))
 
@@ -41,13 +42,20 @@ const startViewTransition = (event: MouseEvent) => {
     )
   })
 }
+
+const currentIcon = computed(() => {
+  // Use the icons from UI config, fallback to lucide icons
+  return nextTheme.value === 'dark'
+    ? (ui?.icons?.light || 'i-lucide-sun')
+    : (ui?.icons?.dark || 'i-lucide-moon')
+})
 </script>
 
 <template>
   <ClientOnly>
     <UButton
       :aria-label="`Switch to ${nextTheme} mode`"
-      :icon="`i-heroicons-solid-${nextTheme === 'dark' ? 'sun' : 'moon'}`"
+      :icon="currentIcon"
       color="neutral"
       variant="ghost"
       size="sm"

@@ -10,7 +10,8 @@ const projects = computed(() => {
     ...project,
     url: project._path || project.path || project.url || '',
     image: project.image || '',
-    date: project.date || ''
+    date: project.date || '',
+    endDate: project.endDate || ''
   }))
 })
 
@@ -31,10 +32,25 @@ const page = computed(() => {
   }
 })
 
-// Dummy global object for demonstration; replace with your actual global config if needed
-const global = {
-  meetingLink: page.value.links[0]?.to || '/',
-  email: 'info@oaaa.lk'
+// Function to format project period
+const getProjectPeriod = (project: any) => {
+  if (!project.date) return 'Ongoing'
+
+  const startDate = new Date(project.date)
+  const endDate = project.endDate ? new Date(project.endDate) : null
+
+  const formatDate = (date: Date) => {
+    return date.toLocaleDateString('en-US', {
+      month: 'short',
+      year: 'numeric'
+    })
+  }
+
+  if (endDate) {
+    return `${formatDate(startDate)} - ${formatDate(endDate)}`
+  } else {
+    return `${formatDate(startDate)} - Present`
+  }
 }
 
 useSeoMeta({
@@ -56,74 +72,117 @@ useSeoMeta({
         description: '!mx-0 text-left',
         links: 'justify-start'
       }"
-    >
-      <template #links>
-        <div
-          v-if="page.links && page.links.length > 0"
-          class="flex items-center gap-2"
+    />
+
+    <UPageSection :ui="{ container: '!pt-0' }">
+      <div class="space-y-8">
+        <Motion
+          v-for="(project, index) in projects"
+          :key="project.title"
+          :initial="{ opacity: 0, transform: 'translateY(20px)' }"
+          :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
+          :transition="{ delay: 0.1 * index }"
+          :in-view-options="{ once: true }"
         >
-          <UButton
-            v-if="page.links[0]"
-            :to="global.meetingLink"
-            v-bind="page.links[0]"
-          />
-          <UButton
-            v-if="page.links[1]"
-            :to="`mailto:${global.email}`"
-            v-bind="page.links[1]"
-          />
-        </div>
-      </template>
-    </UPageHero>
-    <UPageSection
-      :ui="{
-        container: '!pt-0'
-      }"
-    >
-      <Motion
-        v-for="(project, index) in projects"
-        :key="project.title"
-        :initial="{ opacity: 0, transform: 'translateY(10px)' }"
-        :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
-        :transition="{ delay: 0.2 * index }"
-        :in-view-options="{ once: true }"
-      >
-        <UPageCard
-          :title="project.title"
-          :description="project.description"
-          :to="project.url"
-          orientation="horizontal"
-          variant="naked"
-          :reverse="index % 2 === 1"
-          class="group"
-          :ui="{
-            wrapper: 'max-sm:order-last'
-          }"
-        >
-          <template #leading>
-            <span class="text-sm text-muted">
-              {{ project.date ? new Date(project.date).getFullYear() : '' }}
-            </span>
-          </template>
-          <template #footer>
-            <ULink
-              :to="project.url"
-              class="text-sm text-primary flex items-center"
-            >
-              View Project
-              <UIcon
-                name="i-lucide-arrow-right"
-                class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
-              />
-            </ULink>
-          </template>
-          <NuxtImg
-            :src="project.image"
-            :alt="project.title"
-            class="object-cover w-full h-48 rounded-lg"
-          />
-        </UPageCard>
-      </Motion>
+          <UCard
+            class="overflow-hidden"
+            :ui="{
+              body: 'p-0'
+            }"
+          >
+            <div class="md:flex">
+              <!-- Large Image Section -->
+              <div class="md:w-1/3 lg:w-2/5">
+                <NuxtImg
+                  v-if="project.image"
+                  :src="project.image"
+                  :alt="project.title"
+                  class="w-full h-64 md:h-full object-cover"
+                />
+                <div
+                  v-else
+                  class="w-full h-64 md:h-full bg-muted flex items-center justify-center"
+                >
+                  <UIcon
+                    name="i-lucide-telescope"
+                    class="w-16 h-16 text-muted-foreground"
+                  />
+                </div>
+              </div>
+
+              <!-- Content Section -->
+              <div class="md:w-2/3 lg:w-3/5 p-6 md:p-8 flex flex-col justify-between">
+                <!-- Header Content -->
+                <div class="space-y-4">
+                  <div class="flex items-start justify-between">
+                    <div class="space-y-2">
+                      <div
+                        v-if="project.category"
+                        class="flex items-center gap-2"
+                      >
+                        <span class="text-sm font-medium text-primary uppercase tracking-wide">
+                          {{ project.category }}
+                        </span>
+                      </div>
+                      <h2 class="text-xl font-semibold text-foreground leading-tight">
+                        {{ project.title }}
+                      </h2>
+                    </div>
+                    <div class="flex flex-col gap-2 ml-4">
+                      <UBadge
+                        v-if="project.status"
+                        :label="project.status"
+                        :color="project.status === 'Completed' ? 'success' : project.status === 'Ongoing' ? 'primary' : 'neutral'"
+                        variant="soft"
+                        size="sm"
+                      />
+                      <UBadge
+                        :label="getProjectPeriod(project)"
+                        variant="outline"
+                        size="sm"
+                      />
+                    </div>
+                  </div>
+
+                  <p class="text-muted-foreground leading-relaxed">
+                    {{ project.description }}
+                  </p>
+                </div>
+
+                <!-- Footer Content -->
+                <div class="flex items-center justify-between mt-6 pt-4 border-t border-border">
+                  <div class="space-y-1">
+                    <div
+                      v-if="project.participants"
+                      class="text-sm text-muted-foreground"
+                    >
+                      <span class="font-medium">Participants:</span> {{ project.participants }}
+                    </div>
+                    <div
+                      v-if="project.location"
+                      class="text-sm text-muted-foreground"
+                    >
+                      <span class="font-medium">Location:</span> {{ project.location }}
+                    </div>
+                  </div>
+                  <UButton
+                    :to="project.url"
+                    color="neutral"
+                    size="sm"
+                    class="px-4"
+                  >
+                    View Project
+                    <UIcon
+                      name="i-lucide-arrow-right"
+                      class="ml-2 w-4 h-4"
+                    />
+                  </UButton>
+                </div>
+              </div>
+            </div>
+          </UCard>
+        </Motion>
+      </div>
     </UPageSection>
   </UPage>
 </template>

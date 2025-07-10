@@ -40,6 +40,26 @@ if (!posts.value) {
           header: 'hidden'
         }"
       >
+        <template #image>
+          <div class="flex-shrink-0 mr-6">
+            <NuxtImg
+              v-if="post.image"
+              :src="post.image"
+              :alt="post.title"
+              class="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-xl shadow-sm"
+            />
+            <div
+              v-else
+              class="w-20 h-20 sm:w-24 sm:h-24 bg-muted rounded-xl flex items-center justify-center shadow-sm"
+            >
+              <UIcon
+                name="i-lucide-calendar-days"
+                class="w-8 h-8 text-muted-foreground"
+              />
+            </div>
+          </div>
+        </template>
+
         <template #footer>
           <UButton
             size="xs"

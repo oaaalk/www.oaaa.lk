@@ -164,7 +164,7 @@ export default defineContentConfig({
         status: z.string(),
         category: z.string(),
         location: z.string(),
-        image: z.string().optional(),
+        image: z.string().optional().editor({ input: 'media' }),
         time: z.string().optional(),
         duration: z.string().optional(),
         level: z.string().optional(),

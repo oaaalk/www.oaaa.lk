@@ -12,6 +12,17 @@ const eventsArray = computed<Event[]>(() => {
   })) as Event[]
 })
 
+const getStatusLabel = (status: string) => {
+  return status.charAt(0).toUpperCase() + status.slice(1)
+}
+
+const getEventStatus = (event: any) => {
+  if (!event.date) return 'upcoming'
+  const eventDate = new Date(event.date)
+  const today = new Date()
+  const endDate = event.endDate ? new Date(event.endDate) : eventDate
+  return today < eventDate ? 'upcoming' : today > endDate ? 'completed' : 'ongoing'
+}
 const timelineEvents = computed(() =>
   eventsArray.value
     .slice()
@@ -21,8 +32,9 @@ const timelineEvents = computed(() =>
       description: event.description,
       image: event.image,
       date: event.date,
+      badge: getStatusLabel(getEventStatus(event)),
       to: event.path,
-      ui: { container: 'max-w-lg' }
+      ui: { container: 'max-w-xl' }
     }))
 )
 
