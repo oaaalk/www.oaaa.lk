@@ -1,14 +1,5 @@
 export default defineAppConfig({
-  global: {
-    picture: {
-      dark: 'oaaa.jpg',
-      light: 'oaaa.jpg',
-      alt: 'My profile picture'
-    },
-    meetingLink: 'https://cal.com/',
-    email: 'astroananda@gmail.com',
-    available: true
-  },
+  global: false,
   ui: {
     colors: {
       primary: 'neutral',
