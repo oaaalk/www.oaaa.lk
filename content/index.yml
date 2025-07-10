@@ -20,10 +20,10 @@ hero:
       icon: i-heroicons-telescope
       color: neutral
   images:
-    - src: /images/hero/telescope.jpg
+    - src: /images/projects/516774880-10223807726741051-8950123606551236012-n-1.jpg
       alt: /images/projects/516774880-10223807726741051-8950123606551236012-n-1.jpg
-    - src: /images/hero/stargazing.jpg
-      alt: /images/testimonials/samantha.jpg
+    - src: /images/projects/495205457-122120937020804333-6158502213043777099-n.jpg
+      alt: /images/projects/494597363-122120937500804333-2372280415398055295-n.jpg
     - src: /oaaa.jpg
       alt: OAAA Logo
 about:
@@ -92,7 +92,7 @@ board:
     - name: Pulasthi Kanatthage
       role: Treasurer
       image: /images/officials/pulasthi.jpeg
-    - name: Amila Karunarathna
+    - name: Am Karunarathna
       role: Assistant Secretary
       image: /images/events/unseen-sun.jpg
     - name: Harshana Jayarathne
