@@ -22,11 +22,11 @@ hero:
   images:
     - src: /images/projects/516774880-10223807726741051-8950123606551236012-n-1.jpg
       alt: /images/projects/516774880-10223807726741051-8950123606551236012-n-1.jpg
-    - src: /images/projects/494597363-122120937500804333-2372280415398055295-n.jpg
+    - src: /images/situmleadning.jpeg
       alt: /images/projects/494597363-122120937500804333-2372280415398055295-n.jpg
-    - src: /images/testimonials/kavinda.jpg
+    - src: /images/cfc89ad6-22ce-422e-8c3b-d10938d5c789.jpeg
       alt: OAAA Logo
-    - src: /images/a1fa1902-e3f6-44bb-9da1-74a48ca9bbbc.jpeg
+    - src: /images/495f0da8-223e-48cc-9c2a-abf3880834d6.jpeg
 about:
   title: About OAAA
   description: |
@@ -87,13 +87,13 @@ board:
     - name: Eranga Jayashantha
       role: Vice President
       image: /images/officials/eranga.jpeg
-    - name: D.S.L. Karunasekara
+    - name: Sankha Karunasekara
       role: Secretary
       image: /images/officials/sankha.png
     - name: Pulasthi Kanatthage
       role: Treasurer
       image: /images/officials/pulasthi.jpeg
-    - name: Am Karunarathna
+    - name: Amila Karunarathna
       role: Assistant Secretary
       image: /images/events/unseen-sun.jpg
     - name: Harshana Jayarathne

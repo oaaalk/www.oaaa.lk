@@ -4,7 +4,9 @@ export default defineAppConfig({
     colors: {
       primary: 'neutral',
       neutral: 'neutral'
-    }
+    },
+
+    icons: ''
   },
   uiPro: {
     pageHero: {
