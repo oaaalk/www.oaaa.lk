@@ -2,13 +2,13 @@ seo:
   title: Old Anandians' Astronomical Association
   description: Astronomy for all generations of Anandians
 title: Old Anandians' Astronomical Association
-description: Blending with the cosmos | nspiring curiosity and discovery in astronomy for Anandians and the wider community.
+description: Blending with the cosmos | Inspiring curiosity and discovery in astronomy for Anandians and the wider community.
 hero:
   title: Explore the Cosmos with OAAA
   description: Connecting Anandians past and present through a shared passion for astronomy and science.
   links:
     - label: Join OAAA
-      to: https://nuxt.studio/docs/projects/deploy
+      to: https://docs.google.com/forms/d/e/1FAIpQLSe5IVyWKmA2-u3asi-emCscs4mNY-I0JYYfepowzK96aNuAdA/viewform
       icon: i-heroicons-user-plus
       color: neutral
     - label: Events
@@ -21,9 +21,9 @@ hero:
       color: neutral
   images:
     - src: /images/hero/telescope.jpg
-      alt: OAAA Telescope Observatory
+      alt: /images/projects/516774880-10223807726741051-8950123606551236012-n-1.jpg
     - src: /images/hero/stargazing.jpg
-      alt: Public Stargazing Event
+      alt: /images/testimonials/samantha.jpg
     - src: /oaaa.jpg
       alt: OAAA Logo
 about:
@@ -80,25 +80,25 @@ board:
   title: Board of Officials
   description: The execuative committee of Old Anandians' Astronomical Association for the year of 2024 -2025
   officials:
-    - name: Dr. D.Z.S.S. Gunarathne
+    - name: Dr. Sithum Gunarathne
       role: President
       image: /images/officials/10.jpeg
-    - name: B.G.E.T.Jayashantha
+    - name: Eranga Jayashantha
       role: Vice President
-      image: /ananda.png
+      image: /images/officials/eranga.jpeg
     - name: D.S.L. Karunasekara
       role: Secretary
-      image: /ananda.png
-    - name: P.S.Kanatthage
+      image: /images/officials/sankha.png
+    - name: Pulasthi Kanatthage
       role: Treasurer
-      image: /ananda.png
-    - name: G.K.B.A.S. Karunarathna
+      image: /images/officials/pulasthi.jpeg
+    - name: Amila Karunarathna
       role: Assistant Secretary
-      image: /ananda.png
-    - name: T.H. Jayarathne
+      image: /images/events/unseen-sun.jpg
+    - name: Harshana Jayarathne
       role: Assistant Treasurer
-      image: /images/officials/eranga.jpeg
-    - name: Dr. L.P. Ekanayake
+      image: /images/officials/harshana.jpg
+    - name: Dr. Lahiru Ekanayake
       role: Editor
       image: /images/officials/lahiru.jpeg
 blog:
