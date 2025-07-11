@@ -22,11 +22,13 @@ hero:
   images:
     - src: /images/projects/516774880-10223807726741051-8950123606551236012-n-1.jpg
       alt: /images/projects/516774880-10223807726741051-8950123606551236012-n-1.jpg
-    - src: /images/situmleadning.jpeg
-      alt: /images/projects/494597363-122120937500804333-2372280415398055295-n.jpg
+    - src: /images/1-52.jpg
+      alt: /images/1-52.jpg
     - src: /images/cfc89ad6-22ce-422e-8c3b-d10938d5c789.jpeg
       alt: OAAA Logo
     - src: /images/495f0da8-223e-48cc-9c2a-abf3880834d6.jpeg
+    - src: /images/f69451f0-f142-4866-a0e5-859b7c9812f5.jpeg
+    - src: /images/6b7aeb30-0b2a-4f92-868e-9975466939f6.jpeg
 about:
   title: About OAAA
   description: |
@@ -106,26 +108,26 @@ blog:
   title: Latest Events
   description: Discover upcoming astronomy events, workshops, and stargazing sessions organized by OAAA
 testimonials:
-  - quote: The OAAA's astronomy workshops opened my eyes to the wonders of the universe. Their dedication to making complex astronomical concepts accessible to everyone is truly remarkable.
+  - quote: Our kids may not have seen the ocean yet, but today they got to see the stars. As a parent, I’m truly grateful.
     author:
-      name: Dr. Samantha Perera
-      description: Senior Astronomer, University of Colombo
+      name: Kumuduni Perera
+      description: Parent, Participate Astro Kids Programme (Kalagama, Nikaweratiya)
       avatar:
-        src: /images/testimonials/samantha.jpg
+        src: ''
         alt: Dr. Samantha Perera
   - quote: As a former student of Ananda College, OAAA's mentorship program helped me pursue my passion for astrophysics. Their guidance and resources were instrumental in my academic journey.
     author:
       name: Kavinda Silva
       description: PhD Candidate in Astrophysics
       avatar:
-        src: /images/testimonials/kavinda.jpg
+        src: ''
         alt: Kavinda Silva
   - quote: OAAA's public stargazing events have become a highlight in Sri Lanka's science education calendar. They make astronomy accessible and exciting for everyone.
     author:
       name: Prof. Nimal Gunawardena
       description: Director, Sri Lanka Astronomical Society
       avatar:
-        src: /images/testimonials/nimal.jpg
+        src: ''
         alt: Prof. Nimal Gunawardena
 faq:
   title: Frequently Asked Questions
