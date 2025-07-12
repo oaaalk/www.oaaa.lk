@@ -1,8 +1,11 @@
 ---
 title: "A Beginner's Guide to Night Sky Observation: Your First Steps into Astronomy"
-description: Learn how to start observing the night sky with just your naked eyes. This simple guide covers everything beginners need to know about stargazing, from finding the best viewing spots to identifying your first constellations.
+description: Learn how to start observing the night sky with just your naked
+  eyes. This simple guide covers everything beginners need to know about
+  stargazing, from finding the best viewing spots to identifying your first
+  constellations.
 date: 2025-01-15
-image: /images/blog/patient-observation.jpg
+image: /images/events/1-86.jpeg
 minRead: 6
 author:
   name: Ravindu Gunasekara
