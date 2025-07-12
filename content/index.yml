@@ -111,24 +111,24 @@ testimonials:
   - quote: Our kids may not have seen the ocean yet, but today they got to see the stars. As a parent, I’m truly grateful.
     author:
       name: Kumuduni Perera
-      description: Parent, Participate Astro Kids Programme (Kalagama, Nikaweratiya)
+      description: Parent, Participant Astro Kids Programme (Kalagama, Nikaweratiya)
       avatar:
         src: ''
         alt: Dr. Samantha Perera
-  - quote: As a former student of Ananda College, OAAA's mentorship program helped me pursue my passion for astrophysics. Their guidance and resources were instrumental in my academic journey.
+  - quote: OAAA's mission is to inspire curiosity and foster scientific thinking among Anandians and the wider community. We believe that astronomy is a gateway to a lifetime of discovery and wonder.
     author:
-      name: Kavinda Silva
-      description: PhD Candidate in Astrophysics
+      name: Dr. Sithum Gunarathne
+      description: President, Old Anandians' Astronomical Association
+      avatar:
+        src: /images/officials/10.jpeg
+        alt: Dr. Sithum Gunarathne
+  - quote: Seeing Saturn's rings through a telescope for the first time was unforgettable. The OAAA observation camp made me realize how amazing the universe really is!
+    author:
+      name: Dineth Jayawardena
+      description: Student, Anuradhapura Central College
       avatar:
         src: ''
-        alt: Kavinda Silva
-  - quote: OAAA's public stargazing events have become a highlight in Sri Lanka's science education calendar. They make astronomy accessible and exciting for everyone.
-    author:
-      name: Prof. Nimal Gunawardena
-      description: Director, Sri Lanka Astronomical Society
-      avatar:
-        src: ''
-        alt: Prof. Nimal Gunawardena
+        alt: Dineth Jayawardena
 faq:
   title: Frequently Asked Questions
   description: Common questions about the Old Anandians' Astronomical Association
