@@ -5,7 +5,7 @@ export default defineAppConfig({
       light: 'oaaa.jpg',
       alt: 'OAAA Logo'
     },
-    meetingLink: 'https://cal.com/',
+    meetingLink: 'https://oaaa.lk',
     email: 'astroananda@gmail.com',
     available: true
   },

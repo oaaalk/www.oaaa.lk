@@ -3,8 +3,8 @@ import { field, group } from '@nuxt/content/preview'
 export default defineNuxtSchema({
   appConfig: {
     global: group({
-      title: 'Website',
-      description: 'Global website configuration',
+      title: 'OAAA',
+      description: 'Old Anandians Astronomical Association',
       icon: 'lucide:settings',
       fields: {
         meetingLink: field({
@@ -12,7 +12,7 @@ export default defineNuxtSchema({
           title: 'Meeting link',
           description: 'Your meeting link.',
           icon: 'lucide:calendar',
-          default: 'https://cal.com/'
+          default: 'https://oaaa.lk'
         }),
         available: field({
           type: 'boolean',
@@ -38,21 +38,21 @@ export default defineNuxtSchema({
               title: 'Dark mode',
               description: 'Your profile picture in dark mode.',
               icon: 'heroicons-solid:moon',
-              default: 'https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+              default: '/oaaa.jpg'
             }),
             light: field({
               type: 'string',
               title: 'Light mode',
               description: 'Your profile picture in light mode.',
               icon: 'heroicons-solid:sun',
-              default: 'https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+              default: '/oaaa.jpg'
             }),
             alt: field({
               type: 'string',
               title: 'Alt text',
-              description: 'Your profile picture alt text.',
+              description: 'OAAA Logo.',
               icon: 'lucide:image',
-              default: 'My profile picture'
+              default: 'OAAA Logo'
             })
           }
         })
@@ -144,7 +144,7 @@ export default defineNuxtSchema({
       fields: {
         siteName: field({
           type: 'string',
-          title: 'Site Name',
+          title: 'Name',
           description: 'Name used in ogSiteName and as the second part of your page title (My page title - OAAA).',
           icon: 'i-mdi-web',
           default: 'OAAA'

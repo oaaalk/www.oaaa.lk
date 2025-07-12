@@ -1,9 +1,9 @@
 images:
   - src: /oaaa.jpg
-    alt: "OAAA Logo"
+    alt: "OAAA"
     caption: "Old Anandian Astronomical Association"
   - src: /ananda.png
-    alt: "Ananda College Logo"
+    alt: "Ananda College"
     caption: "Ananda College"
 title: OAAA
 description: The Old Anandians' Astronomical Association (OAAA) is a distinguished organization of alumni from Ananda College, Colombo, Sri Lanka, united by our shared passion for astronomy and space science.
@@ -16,13 +16,11 @@ navigation:
   icon: /favicon.ico
 content: |
   The Old Anandians' Astronomical Association (OAAA) is a distinguished organization of alumni from Ananda College, Colombo, Sri Lanka, united by our shared passion for astronomy and space science.
-
   Founded in 2018 to bridge the gap between professional astronomical knowledge and public education, OAAA serves as a beacon for scientific outreach in Sri Lanka. Our members include both amateur and professional astronomers, educators, and science communicators who are dedicated to promoting astronomy as both a science and a hobby. Through our deep connection to Ananda College's rich scientific heritage, we continue to inspire current students and the broader community to explore the wonders of the universe.
 
   ## Ananda College - A Legacy of Excellence
 
-  Ananda College, established in 1886, stands as one of Sri Lanka's premier educational institutions. Founded by the Buddhist Theosophical Society led by Colonel Henry Steel Olcott, the college was named after the Buddha's faithful attendant, Ananda Thero. The college's motto "යථා පුප්ඵං පියං හොති" (Beautiful as a Flower) embodies our commitment to nurturing well-rounded individuals who contribute meaningfully to society.
-
+  Ananda College, established in 1886, stands as one of Sri Lanka's premier educational institutions. Founded by the Buddhist Theosophical Society led by Colonel Henry Steel Olcott, the college was named after the Buddha's faithful attendant, Ananda Thero.
   Throughout its history, Ananda College has been at the forefront of science education in Sri Lanka. The college's distinctive architecture, featuring its iconic clock tower and historic science laboratories, has witnessed generations of students discovering their passion for scientific exploration.
 
   ## The Anandian Astronomical Association (AAA)
